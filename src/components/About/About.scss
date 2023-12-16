@@ -1,0 +1,96 @@
+// About.scss
+
+.dark-theme {
+  .parallax-container {
+    .background-image {
+      background-image: url("https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    }
+  }
+}
+.parallax-container {
+  // width: 50%;
+
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+
+  .background-image {
+    background-image: url("https://images.unsplash.com/photo-1682687981674-0927add86f2b?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); // Replace with your background image
+
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    // top: 10%;
+    // left: 10%;
+    filter: grayscale(
+      10%
+    ); // Optional: Add a grayscale effect to the background
+    transition: transform 1s ease-out; // Smooth transition for the transform effect
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 50px; // Adjust the width of the blinds
+      height: 100%;
+      background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0),
+        rgb(0, 0, 0)
+      );
+      // transition: transform 0.5s ease-out;  // Smooth transition for the blinds effect
+    }
+    &::before {
+      // left: -50px;  // Adjust the initial position of the left blind
+
+      background: linear-gradient(
+        to left,
+        rgba(255, 255, 255, 0),
+        rgb(0, 0, 0)
+      );
+    }
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+    }
+    z-index: -1;
+  }
+
+  .about-content {
+    // z-index: 0;
+    max-width: 800px;
+    
+    margin:  auto;
+    padding: 20px;
+    color: #ffffff;
+
+    h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2em;
+      line-height: 1.5;
+      margin-bottom: 15px;
+      color: white;
+      text-align: left;
+      
+      text-shadow: 0px 0px 1400px 500px rgb(0, 0, 0);
+        
+    }
+  }
+}
+@media screen and (max-width: 700px) {
+  .parallax-container {
+    width: 100%;
+  }
+}

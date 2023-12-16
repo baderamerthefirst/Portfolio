@@ -1,0 +1,168 @@
+// .Header.scss
+
+.light-theme {
+  .ll1 {
+    filter: invert(100%);
+  }
+}
+* {
+  transition: 0.5s;
+} // Add transition properties
+
+.Header {
+  background-color: rgba(255, 255, 255, 0.925);
+  .theme-icon {
+    width: 50px;
+    height: 50px;
+    
+  }
+  // background-color: rgba(255, 255, 255, 0.925);
+
+  .res-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    // margin: 100px;
+    width: 50%;
+  }
+  
+  height: 1.5vh;
+  padding: 15px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  
+  nav {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    
+
+
+    // padding: 10px;
+    a {
+      // color: #000000;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 16px;
+      transition: color 0.3s ease;
+      &:hover {
+        color: #7d5d5c; // Change to your desired hover color
+        cursor: pointer;
+      }
+    }
+  }
+
+  .logo {
+    // margin: 1px;
+    cursor: pointer;
+    position: fixed;
+    top: 2px;
+    right: 60px;
+    img {
+      position: absolute;
+      top: 0;
+      width: 40px; // Adjust the size of your logo
+    }
+    scale: 1;
+    transition: 0.5s ease-in-out;
+  }
+  .ll1 {
+    // filter: invert(100%);
+  }
+  .ll2 {
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+  }
+  .logo:hover {
+    scale: 1.2;
+
+    .ll2 {
+      opacity: 1;
+    }
+  }
+
+  .menu-toggle {
+    background-image: url("../../assets/menu.png");
+cursor: pointer;
+    // background-image: url("../../assets/moon1.png");
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(1);
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .res-header {
+    flex-direction: column;
+    align-items: baseline;
+  }
+  .Header {
+    .theme-icon {
+      padding-left: 90px;
+      width: 50px;
+      height: 50px;
+      
+    }
+    width: auto;
+    height: 100%;
+    flex-direction: column;
+    align-items: baseline;
+    padding: 10px;
+    nav {
+      flex-direction: column;
+      padding-left:85px ;
+      .link{
+        padding: 4px;
+
+      }
+    }
+  }
+}
+.hide {
+  background-color: rgba(168, 41, 41, 0);
+  .res-header {
+    // display: none;
+    overflow: hidden;
+   
+    width:  0px;
+  }
+  .menu-toggle {
+  }
+  // display: none;
+}
+.dark-theme {
+  .Header {
+    background-color: rgba(0, 0, 0, 0.925);
+
+    .menu-toggle {
+      filter: invert(1);
+    }
+  }
+
+  .Header .link {
+    color: #ffffff;
+  }
+  .ll1 {
+    filter: invert(0%);
+  }
+
+  .hide {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+
+
+
+
+
+
+

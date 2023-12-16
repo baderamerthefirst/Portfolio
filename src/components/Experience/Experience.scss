@@ -1,0 +1,37 @@
+.dark-theme {
+  .exp-container {
+    background-color: #0a0a0aec;
+    h2 {
+      color: rgb(255, 255, 255);
+      // padding: 10px;
+    }
+  }
+}
+
+.exp-container {
+  min-height: 100vh;
+  padding: 5%;
+  background-color: #f0f0f0;
+  h2 {
+    color: rgb(0, 0, 0);
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+
+  .experience {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+
+  .exp-container {
+    padding: 2%;
+    font-size: 0.9em;
+  }
+  
+}

@@ -1,0 +1,47 @@
+.dark-theme {
+  .footer-container {
+    background-color: #000000;
+    border-top: 1px solid #e0e0e0;
+
+    p {
+      color: white;
+    }
+
+    .social-links {
+      a {
+        color: white;
+      }
+    }
+  }
+}
+
+.footer-container {
+  background-color: #c9c9c9; // Add your desired background color
+  color: #000000; // Add your desired text color
+  padding: 20px 0;
+  text-align: center;
+  border-top: 1px solid #000000;
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+
+    a {
+      margin: 0 10px;
+      font-size: 1.5em;
+      color: #333; // Add your desired link color
+
+      &:hover {
+       scale: 1.1; // Add your desired hover color
+      }
+    }
+  }
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* You can add more styles as needed for links, icons, etc. */

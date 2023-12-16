@@ -1,0 +1,146 @@
+.dark-theme {
+  .skills-container {
+    background-color: #0a0a0ad3;
+    .skills {
+      h2 {
+        color: rgba(255, 255, 255, 0.925);
+      }
+    }
+    .skills-list {
+      background-color: #f5f5f5;
+
+      .tech-skills,
+      .other-skills {
+        h3 {
+          color: rgba(255, 255, 255, 0.925);
+        }
+        .skill-card {
+          h4 {
+            color: #ffffffde;
+          }
+          .skill-level {
+            background-color: #000000;
+          }
+        }
+      }
+    }
+  }
+}
+
+.skills-container {
+  border-bottom: 1px solid black;
+  &.inView {
+    .skills {
+      .skills-list {
+        .skill-card {
+          .skill-level {
+            .level-line {
+              animation: fillWidth 2s ease;
+            }
+          }
+        }
+      }
+    }
+  }
+  padding: 40px 0;
+  background-color: #f5f5f5;
+  // display: flex;
+  width: 100%;
+  // flex-direction: row;
+  .skills {
+    // background-color: #dfdfdf;
+    width: 90%;
+    margin: 0 auto;
+    // background-color: #fff;
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #000000;
+    }
+
+    .skills-list {
+      display: flex;
+      flex-direction: row;
+      background-color: #3333330c;
+      padding: 10px;
+      // width: 100%;
+      justify-content: space-around;
+    }
+
+    .tech-skills,
+    .other-skills {
+      padding: 20px;
+      margin-bottom: 40px;
+      flex: 1;
+
+      h3 {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+        color: #000000;
+      }
+
+      .skill-card {
+        margin-bottom: 20px;
+
+        h4 {
+          margin-bottom: 0px;
+          font-size: 1rem;
+          color: #000000;
+        }
+
+        .skill-level {
+          position: relative;
+          height: 15px;
+          background-color: #f5f5f5;
+          border-radius: 50px;
+
+          .level-line {
+            height: 100%;
+            border-radius: 15px;
+          }
+
+          span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -42%);
+            // color: #000000;
+            // font-size: 12px;
+          }
+        }
+      }
+    }
+    @keyframes fillWidth {
+      from {
+        width: 0%;
+      }
+    }
+    .tech-skills {
+      .level-line {
+        background-color: #3498dbda; // Color for technical skills
+      }
+    }
+
+    .personal-skills {
+      .level-line {
+        background-color: #e74d3cda; // Color for personal skills
+      }
+    }
+
+    .software-skills {
+      .level-line {
+        background-color: #2ecc70da; // Color for software skills
+      }
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+  .skills-container {
+    .skills {
+      .skills-list {
+        flex-direction: column;
+      }
+    }
+  }
+}
